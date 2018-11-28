@@ -1,9 +1,20 @@
-<!DOCTYPEhtml>
+<!DOCTYPE html>
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 
 <h1>This is our form</h1>
 
 <h2>Please complete our form</h2>
 
 <form>
-<input type="text" placeholder="First Name">
+
+<input class="form" type="text" required placeholder="First Name">
+
+<input class="form" type="text" required placeholder="Last Name">
+
+<label for="dob">Date of Birth</label>
+<input class="form" type="date" required id="dob" name="Date of Birth">
+
+<button type="submit">Submit</button>
+
 </form>
