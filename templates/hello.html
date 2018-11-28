@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>My Flask Project Page</title>
+</head>
+
+<body>
+
+    <h1>{{message}}</h1>
+
+    <p>Let's keep in touch </p>
+
+        <div id="contact-form">
+
+            <form method="post" action="/signup">
+                <label for="email">Email address:</label>
+                    <input type="email" id="email" name="email" required="required"><br>
+                <label for="firstname">First name:</label>
+                    <input type="text" name="firstname"><br>
+                <label for="surname">Surname:</label>
+                    <input type="text" name="lastname"><br>
+                <input type="submit" value="Submit" id="submitbutton">
+            </form>
+
+        </div>
+
+</body>
+
+</html>

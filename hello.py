@@ -1,30 +1,25 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from jsonreading import extract_json
+
 app = Flask(__name__)
 
-
-@app.route('/')
-def home():
-    return 'Hello, World!'
-
-
-@app.route('/about/')
-def about():
-    return 'This is a Flask website'
-
-
-@app.route('/hello/')
+@app.route("/")
 def hello():
-    return 'Hello'
+    message = "Hi!"
+    return render_template("hello.html", message=message)
 
-@app.route('/add/2/2/')
-def twoplustwo():
-    return '2+2'
+@app.route("/data/<user_number>")
+def data(user_number):
+    raw_data = extract_json()
+    users = raw_data ["users"]
+    current_user = users[int(user_number)]
+    # return str(current_user)
+    name = str(current_user['name'])
+    address = str(current_user['address'])
+    phone = str(current_user['phone'])
+    return render_template("userprofile.html", name=name, address=address, phone=phone)
 
-@app.route('/circle/<radius>/')
-def circle_area(radius):
-    radius = int(radius)
-    area = 3.14 * (radius ** 2)
-    return str(area)
+
 
 
 app.run(debug=True)
