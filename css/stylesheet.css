@@ -9,9 +9,11 @@ h2 {
   grid-template-rows: 50px 50px;
   width: 10%;
   padding: 12px 20px;
-  margin: 20px 10px;
+  margin: 15px 10px;
   border-radius: 8px;
   background-color: transparent;
   border: 2px solid;
   border-color: rgba(232, 236, 241, 1);
+  outline: none;
+  font-size: 14px;
 }
