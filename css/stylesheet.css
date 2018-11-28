@@ -1,0 +1,19 @@
+
+h2 {
+  font-size: 20px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 0px 100px 100px;
+  grid-template-rows: 50px 50px;
+  width: 10%;
+  padding: 12px 20px;
+  margin: 15px 10px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 2px solid;
+  border-color: rgba(232, 236, 241, 1);
+  outline: none;
+  font-size: 14px;
+}
