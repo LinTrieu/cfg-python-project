@@ -5,5 +5,13 @@ h2 {
 
 .form {
   display: grid;
-  grid-template-columns: 50px 100px 100px;
+  grid-template-columns: 0px 100px 100px;
+  grid-template-rows: 50px 50px;
+  width: 10%;
+  padding: 12px 20px;
+  margin: 20px 10px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 2px solid;
+  border-color: rgba(232, 236, 241, 1);
 }
