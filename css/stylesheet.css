@@ -9,6 +9,21 @@ header {
   background-color: rgba(232, 236, 241, 1);
   border-radius: 10px;
 }
+.search {
+  display: grid;
+  width: 30%;
+  padding: 12px 20px;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  margin-left: 890px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 2px solid;
+  border-color: black;
+  outline: none;
+  font-size: 14px;
+  font-family: 'Noto Sans SC', sans-serif;
+}
 footer {
   width: auto;
   height: 30px;
