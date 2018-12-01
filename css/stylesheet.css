@@ -3,7 +3,7 @@
 header {
   width: auto;
   height: 2%;
-  padding: 5% 10% 5% 10%;
+  padding: 3% 10%;
   margin: 1% 1% 5% 1%;
   display: grid;
   background-color: rgba(232, 236, 241, 1);
@@ -12,8 +12,8 @@ header {
 footer {
   width: auto;
   height: 30px;
-  padding: 5% 10% 5% 10%;
-  margin: 1% 1% 5% 1%;
+  padding: 5% 10%;
+  margin: 1% 1% 1% 1%;
   display: grid;
   background-color: rgba(232, 236, 241, 1);
   border-radius: 10px;
