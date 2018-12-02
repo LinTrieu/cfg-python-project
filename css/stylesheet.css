@@ -105,6 +105,13 @@ header {
   font-family: 'Noto Sans SC', sans-serif;
 }
 
+@media screen and (max-width: 1100px) {
+  .welcome-box {
+    width: 58%;
+    height: 35%;
+  }
+}
+
 h2 {
   font-size: 20px;
   text-align: center;
