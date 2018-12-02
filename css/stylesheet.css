@@ -9,6 +9,7 @@ header {
   background-color: rgba(232, 236, 241, 1);
   border-radius: 10px;
 }
+
 .search {
   display: grid;
   width: 30%;
@@ -24,8 +25,16 @@ header {
   font-size: 14px;
   font-family: 'Noto Sans SC', sans-serif;
 }
-.container {
 
+/* change this */
+.container {
+  width: auto;
+  height: 2%;
+  padding: 3% 10%;
+  margin: 1% 1% 5% 1%;
+  display: grid;
+  background-color: rgba(232, 236, 241, 1);
+  border-radius: 10px;
 }
 
 .sign-up-form {
