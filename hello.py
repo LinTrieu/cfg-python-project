@@ -8,19 +8,16 @@ def hello():
     message = "Hi!"
     return render_template("hello.html", message=message)
 
-@app.route("/data/<user_number>")
-def data(user_number):
+@app.route("/data")
+def data():
     raw_data = extract_json()
-    users = raw_data ["users"]
-    current_user = users[int(user_number)]
-    # return str(current_user)
-    name = str(current_user['name'])
-    address = str(current_user['address'])
-    phone = str(current_user['phone'])
-    return render_template("userprofile.html", name=name, address=address, phone=phone)
+    current_user = str(raw_data ["users"][0])
+    return render_template("userprofile.html", current_user=current_user)
 
-
-
+@app.route('/result',methods = ['POST', 'GET'])
+def result():
+    if request.method == 'POST':
+        result = request.form
+        return render_template("result.html", result=result)
 
 app.run(debug=True)
-
