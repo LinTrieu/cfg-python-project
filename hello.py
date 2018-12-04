@@ -10,7 +10,7 @@ def hello():
 
 
 
-@app.route('/confirmation')
+@app.route('/confirmation', methods=["GET", "POST"])
 def confirmation():
    data = {}
 
@@ -20,9 +20,9 @@ def confirmation():
        "address": request.args.get('firstname'),
        "phone": request.args.get('lastname')
    })
-   with open("users.json", "w") as outfile:
-       json.dump(data, outfile)
-   return render_template('confirmation.html')
+   with open("users.json", "w") as write_file:
+       json.dump(data, write_file)
+   return render_template('/confirmation.html')
 
 
 app.run(debug=True)
