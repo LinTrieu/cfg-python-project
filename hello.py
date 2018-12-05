@@ -1,25 +1,28 @@
-from flask import Flask, render_template, request
-from jsonreading import extract_json
+from flask import Flask,render_template,request,json
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    message = "Hi!"
-    return render_template("hello.html", message=message)
-
-@app.route("/data/<user_number>")
-def data(user_number):
-    raw_data = extract_json()
-    users = raw_data ["users"]
-    current_user = users[int(user_number)]
-    # return str(current_user)
-    name = str(current_user['name'])
-    address = str(current_user['address'])
-    phone = str(current_user['phone'])
-    return render_template("userprofile.html", name=name, address=address, phone=phone)
+   message = "Hi!"
+   return render_template("hello.html", message=message)
 
 
+
+
+@app.route('/confirmation', methods=["GET", "POST"])
+def confirmation():
+   data = {}
+
+   data["users"] = []
+   data["users"].append({
+       "name": request.args.get('email'),
+       "address": request.args.get('firstname'),
+       "phone": request.args.get('lastname')
+   })
+   with open("users.json", "w") as write_file:
+       json.dump(data, write_file)
+   return render_template('confirmation.html')
 
 
 app.run(debug=True)
