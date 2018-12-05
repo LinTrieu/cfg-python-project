@@ -22,7 +22,7 @@ def confirmation():
    })
    with open("users.json", "w") as write_file:
        json.dump(data, write_file)
-   return render_template('/confirmation.html')
+   return render_template('confirmation.html')
 
 
 app.run(debug=True)
