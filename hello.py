@@ -40,6 +40,5 @@ def data(user_number):
     surname = str(current_user['surname'])
     return render_template("userprofile.html", email=email, first_name=first_name, surname=surname)
 
-
 app.run(debug=True)
 

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 
 <html>
-
-<head>
-    <title>My Flask Project Page</title>
+<head> <link rel="stylesheet" type="text/css" href="../static/css/stylesheet.css">
+<script type="text/javascript" src="georgia.json"> </script>
 </head>
 
 <body>
+ <div class="topnav">
+  <a href="/">Home</a>
+  <a href="/userprofile/0">Profile</a>
+    <a href="#network">Network</a>
+  <a href="#contact">Contact</a>
+  </div>
 
-    <h1>{{message}}</h1>
-
-    <p>Let's keep in touch </p>
-
-        <div id="contact-form">
-
+<div class="container-user-page">
+    <div id="contact-form">
+    <h2> Welcome to Doyenne, create a profile now to find your dream job </h2>
             <form method="get" action="/confirmation">
                 <label for="firstname">First name:</label>
                     <input type="text" id='firstname' name="firstname"><br>
@@ -25,7 +27,15 @@
             </form>
 
         </div>
+  <div class="welcome-box">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+</div>
 
 </body>
-
 </html>
