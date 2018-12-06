@@ -5,6 +5,4 @@ def extract_json():
         return (json.load(f))
 
 
-print extract_json()
-
 
