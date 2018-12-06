@@ -26,7 +26,7 @@ def confirmation():
     with open("users.json", "w+") as outfile:
         raw_data['users'].append(new_user)
 
-        json.dump(raw_data, outfile)
+        json.dump(raw_data, outfile,indent=4)
     return render_template('confirmation.html')
 
 @app.route("/userprofile/<user_number>")
